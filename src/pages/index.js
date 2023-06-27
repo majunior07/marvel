@@ -7,7 +7,7 @@ const [heroi, setHeroi] = useState({});
 function Home(){
 
     async function hash(){
-        await api.get()
+        await api.get(``)
         .then((response) => {
             console.log(response.data);
             setHeroi(response.data);
