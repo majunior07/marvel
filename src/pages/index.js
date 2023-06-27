@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Header, Sidebar, Content, Footer} from './styles';
+import { useState } from 'react';
+
+const [heroi, setHeroi] = useState({});
 
 function Home(){
+
+    async function hash(){
+        await api.get()
+        .then((response) => {
+            console.log(response.data);
+            setHeroi(response.data);
+        })
+        .catch(error => console.log(error));
+    }
+
+
+
     return(
         <Container id='template-areas'>
             <Header id='header'>
@@ -10,6 +25,7 @@ function Home(){
             
             <Sidebar id='sidebar'>
                 <h1>Sidebar</h1>
+
             </Sidebar>
 
             <Content id='content'>
