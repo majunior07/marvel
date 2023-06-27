@@ -9,11 +9,11 @@ function Home(){
             </Header>
             
             <Sidebar id='sidebar'>
-                <h1>Navegação</h1>
+                <h1>Sidebar</h1>
             </Sidebar>
 
             <Content id='content'>
-                <h1>Conteudo</h1>
+                <h1>Conteúdo</h1>
             </Content>
 
             <Footer id='footer'>
