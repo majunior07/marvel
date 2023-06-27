@@ -1,6 +1,26 @@
+import React from 'react';
+import { Container, Header, Sidebar, Content, Footer} from './styles';
+
 function Home(){
     return(
-        <h1>Página Home</h1>
+        <Container id='template-areas'>
+            <Header id='header'>
+                <h1>Cabelhaço</h1>
+            </Header>
+            
+            <Sidebar id='sidebar'>
+                <h1>Navegação</h1>
+            </Sidebar>
+
+            <Content id='content'>
+                <h1>Conteudo</h1>
+            </Content>
+
+            <Footer id='footer'>
+                <h1>Rodapé</h1>
+            </Footer>
+
+        </Container>
        
     )
 }

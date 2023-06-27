@@ -4,15 +4,11 @@ import Home from "./pages";
 
 function Routes() {
     return(
-        <div>
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Home} />
                 </Switch>
             </BrowserRouter>
-            
-        </div>
-
     );
 }
 
