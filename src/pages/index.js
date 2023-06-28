@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Container, Header, Sidebar, Content, Footer} from './styles';
 import api from '../services/api';
 import md5 from "md5";
+import axios from 'axios';
 
-//const [heroi, setHeroi] = useState({});
+const [heroi, setHeroi] = useState({});
 
 function Home(){
 
@@ -13,18 +14,19 @@ function Home(){
 
     const time = Number(new Date());
 
-    const hash = md5(time + privateKey + publicKey)
+    const hash = md5(time + privateKey + publicKey) 
 
         useEffect(() => {
         
-            api.get(`http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${process.env.REACT_APP_PUBLIC_KEY}&hash=${hash}`)
+            axios.get(`http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}`)
             .then((response) => {
                 console.log(response.data);
-                //setHeroi(response.data);
+                //setHeroi(response);
+                console.log('oi');
             })
             .catch(error => console.log(error));
 
-        }, [])
+        }, []);
 
         
     
