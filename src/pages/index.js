@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Header, Sidebar, Content, Footer} from './styles';
 import api from '../services/api';
-import md5 from "md5";
 import axios from 'axios';
 
-const [heroi, setHeroi] = useState({});
 
 function Home(){
 
-    const privateKey = `f77920237e6662c52e48ac4fc5afeb3d056043ac`;
-
-    const publicKey = `e726759bd608036e5fbf4bb690b6ac93`;
-
-    const time = Number(new Date());
-
-    const hash = md5(time + privateKey + publicKey) 
+    const [heroi, setHeroi] = useState([]);
 
         useEffect(() => {
         
-            axios.get(`http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}`)
+            api.get(`/characters`)            
             .then((response) => {
-                console.log(response.data);
-                //setHeroi(response);
-                console.log('oi');
+                console.log('primeiro log', response.data);
+                setHeroi(response);
+
             })
             .catch(error => console.log(error));
 
@@ -37,7 +29,10 @@ function Home(){
             </Header>
             
             <Sidebar id='sidebar'>
-                <h1>Sidebar</h1>
+                <h1>Lista de Heróis</h1>
+                <ul>
+                    
+                </ul>
 
             </Sidebar>
 
