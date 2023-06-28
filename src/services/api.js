@@ -1,9 +1,10 @@
 import axios from "axios";
-import md5 from "md5";
+
 const api = axios.create({
 
-    baseURL: `http://gateway.marvel.com/v1/public/`,
+    baseURL: `http://gateway.marvel.com/v1/public/characters?`,
 
 });
+
 
 export default api;
