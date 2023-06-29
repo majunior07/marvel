@@ -6,14 +6,14 @@ import axios from 'axios';
 
 function Home(){
 
-    const [heroi, setHeroi] = useState([]);
+    const [herois, setHerois] = useState([]);
 
         useEffect(() => {
         
-            api.get(`/characters`)            
+            api.get(`characters`)            
             .then((response) => {
                 console.log('primeiro log', response.data);
-                setHeroi(response);
+                setHerois(response.data.data.results);
 
             })
             .catch(error => console.log(error));
@@ -25,13 +25,22 @@ function Home(){
     return(
         <Container id='template-areas'>
             <Header id='header'>
-                <h1>Cabelhaço</h1>
+                <h1>MARVAL 2023</h1>
+                <input type='search' placeholder='Search Here' />
             </Header>
             
             <Sidebar id='sidebar'>
                 <h1>Lista de Heróis</h1>
+                
                 <ul>
-                    
+                    {herois.map(heroi =>{
+                        return(
+                            <li key={heroi.id}>
+                                <span>{heroi.name}</span>
+                                <br/>
+                            </li>
+                        );
+                    })}
                 </ul>
 
             </Sidebar>

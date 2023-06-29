@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    background: red;
     border: 3px solid red;
     padding: 20px;
     display: grid;
@@ -20,13 +21,38 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-    border: 1px solid blue;
+    //border: 1px solid blue;
     padding: 20px;
     grid-area: header;
     height: 15vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        color: white;
+        margin-right: 40px;
+    }
+
+
+    input{
+        outline: none;
+        background: none;
+        border: none;
+        //margin-left: 2rem;
+        width: 350px;
+        height: 35px;
+        border-radius: 1rem;
+        color: white;
+        font-size: 20px;
+        padding: 1.2rem;
+        border: 2px solid #B41F23;
+    }
 `;
 
 export const Sidebar = styled.div`
+    background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: sidebar;
@@ -34,6 +60,7 @@ export const Sidebar = styled.div`
 `;
 
 export const Content = styled.div`
+background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: content;
@@ -41,6 +68,7 @@ export const Content = styled.div`
 `;
 
 export const Footer = styled.div`
+    background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: footer;
