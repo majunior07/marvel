@@ -28,7 +28,7 @@ export const Header = styled.div`
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     h1{
         color: white;

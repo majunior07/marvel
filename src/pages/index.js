@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Header, Sidebar, Content, Footer} from './styles';
 import api from '../services/api';
 import axios from 'axios';
+import Cards from '../components/Cards';
 
 
 function Home(){
@@ -47,6 +48,9 @@ function Home(){
 
             <Content id='content'>
                 <h1>Conteúdo</h1>
+                {
+                    (!herois)?<p>Not Founf</p>:<Cards setHerois={setHerois}/>
+                }
             </Content>
 
             <Footer id='footer'>
