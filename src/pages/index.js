@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Container, Header, Sidebar, Content, Footer} from './styles';
 import api from '../services/api';
 import axios from 'axios';
-import Cards from '../components/Cards';
+import Card from '../components/Card';
+
 
 
 function Home(){
 
-    const [herois, setHerois] = useState([]);
+    const [herois, setHerois] = useState();
+
+    const [url, setUrl] = useState(api);
 
         useEffect(() => {
-        
-            api.get(`characters`)            
+
+            const fetch = async() => {
+
+            const response = await api.get(`characters`)            
             .then((response) => {
                 console.log('primeiro log', response.data);
                 setHerois(response.data.data.results);
@@ -19,7 +24,11 @@ function Home(){
             })
             .catch(error => console.log(error));
 
-        }, []);
+            }
+            
+            fetch();
+
+        }, [api]);
 
         
     
@@ -29,25 +38,21 @@ function Home(){
                 <h1>MARVAL 2023</h1>
                 <input type='search' placeholder='Search Here' />
             </Header>
+
             
             <Sidebar id='sidebar'>
                 <h1>Lista de Heróis</h1>
-                <ul>
-                   {herois.map(heroi =>{
-                    return(
-                        <li>
-                            <span>{heroi.name}</span>
-                        </li>
-                    )
-                   })}                      
-                </ul>
-
+                <h1>Card</h1>
+                {
+                    (!herois) ? "Not found!" : <Card setHerois={herois}/>
+                }                
             </Sidebar>
 
+
             <Content id='content'>
-                <h1>Conteúdo</h1>
-              
+                
             </Content>
+            
 
             <Footer id='footer'>
                 <h1>Rodapé</h1>
