@@ -32,25 +32,21 @@ function Home(){
             
             <Sidebar id='sidebar'>
                 <h1>Lista de Heróis</h1>
-                
                 <ul>
-                    {herois.map(heroi =>{
-                        return(
-                            <li key={heroi.id}>
-                                <span>{heroi.name}</span>
-                                <br/>
-                            </li>
-                        );
-                    })}
+                   {herois.map(heroi =>{
+                    return(
+                        <li>
+                            <span>{heroi.name}</span>
+                        </li>
+                    )
+                   })}                      
                 </ul>
 
             </Sidebar>
 
             <Content id='content'>
                 <h1>Conteúdo</h1>
-                {
-                    (!herois)?<p>Not Founf</p>:<Cards setHerois={setHerois}/>
-                }
+              
             </Content>
 
             <Footer id='footer'>
