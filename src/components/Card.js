@@ -8,7 +8,7 @@ function Card({setHerois}){
                 (setHerois) ? (
                     setHerois.map(heroi => {
                         return(
-                            <div>
+                            <div key={heroi.id}>
                                 <h1>Card Page</h1>
                             </div>
                         )
