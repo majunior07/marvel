@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Routes from "./routes";
+import Rotas from "./rotas";
 import GlobalStyle from "./styles/global";
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <Fragment> 
       <GlobalStyle />
-      <Routes />
+      <Rotas />
     </Fragment>
       
   );

@@ -1,21 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Card({setHerois}){
+
+    let navigate = useNavigate();
     
     return(
-        <div>
+        <Fragment>
             {
                 (setHerois) ? (
                     setHerois.map(heroi => {
                         return(
-                            <div key={heroi.id}>
-                                <h1>Card Page</h1>
+                            <div 
+                                key={heroi.id} 
+                                onClick={() => navigate(`/${heroi.id}`)}>
+                                <h1>{heroi.name}</h1>
                             </div>
                         )
                     })
                 ) : ""
             }
-        </div>
+        </Fragment>
     )
 }
 

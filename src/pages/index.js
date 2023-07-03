@@ -41,8 +41,8 @@ function Home(){
 
             
             <Sidebar id='sidebar'>
-                <h1>Lista de Heróis</h1>
-                <h1>Card</h1>
+                <h1>Lista de Heróis:</h1>
+                <br />
                 {
                     (!herois) ? "Not found!" : <Card setHerois={herois}/>
                 }                

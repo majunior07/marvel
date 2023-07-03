@@ -1,13 +1,14 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom/cjs/react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages";
-import { BrowserRouter } from "react-router-dom";
+import CardHerois from "./components/CardHerois";
 
 function Rotas() {
     return(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>} />
+                <Route path="/:id" element={<CardHerois />} />
             </Routes>
         </BrowserRouter>
                 
