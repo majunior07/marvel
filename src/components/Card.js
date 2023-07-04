@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Card({setHerois}){
+function Card({setHerois, isLoading}){
 
     let navigate = useNavigate();
     
     return(
+        isLoading ? <h1>Loading!!!</h1> :
         <Fragment>
             {
                 (setHerois) ? (

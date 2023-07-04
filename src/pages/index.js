@@ -3,6 +3,7 @@ import { Container, Header, Sidebar, Content, Footer} from './styles';
 import api from '../services/api';
 import axios from 'axios';
 import Card from '../components/Card';
+import Search from '../components/Seach';
 
 
 
@@ -10,22 +11,22 @@ function Home(){
 
     const [herois, setHerois] = useState();
 
-    const [searchHeroi, setSearchHeroi] = useState('');
+    const [isLoading, setLoading] = useState(true);
 
     const [url, setUrl] = useState(api);
 
-    const handleChange = (e) => {
-        setSearchHeroi(e.target.value)
-    }
+    const [query, setQuery] = useState('');
 
-        useEffect(() => {
 
-            const fetch = async() => {
+         useEffect(() => {
+
+            const fetch = async() =>  {
 
             const response = await api.get(`characters`)            
             .then((response) => {
-                console.log('primeiro log', response.data);
+                console.log('primeiro log', response.data.data.results);
                 setHerois(response.data.data.results);
+                setLoading(false);
 
             })
             .catch(error => console.log(error));
@@ -34,7 +35,6 @@ function Home(){
             
             fetch();
 
-            setSearchHeroi('')
 
         }, [api]);
 
@@ -44,14 +44,16 @@ function Home(){
         <Container id='template-areas'>
             <Header id='header' >
                 <h1>MARVAL 2023</h1>
+
+                <Search search={(q) => setQuery(q)} />
+                { /*
                 <input 
                     type='search' 
-                    onChange={handleChange}
-                    placeholder='Search Here' 
-                    value={searchHeroi}
+                    placeholder='teste' 
                 />
-                <button onClick={fetch}>Botão</button>
-                    
+                
+              */}
+
             </Header>
 
             
@@ -59,7 +61,7 @@ function Home(){
                 <h1>Lista de Heróis:</h1>
                 <br />
                 {
-                    (!herois) ? "Not found!" : <Card setHerois={herois}/>
+                    (!herois) ? "Not found!" : <Card setHerois={herois} isLoading={isLoading} />
                 }                
             </Sidebar>
 
