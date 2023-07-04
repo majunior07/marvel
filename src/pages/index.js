@@ -10,7 +10,13 @@ function Home(){
 
     const [herois, setHerois] = useState();
 
+    const [searchHeroi, setSearchHeroi] = useState('');
+
     const [url, setUrl] = useState(api);
+
+    const handleChange = (e) => {
+        setSearchHeroi(e.target.value)
+    }
 
         useEffect(() => {
 
@@ -28,15 +34,24 @@ function Home(){
             
             fetch();
 
+            setSearchHeroi('')
+
         }, [api]);
 
         
     
     return(
         <Container id='template-areas'>
-            <Header id='header'>
+            <Header id='header' >
                 <h1>MARVAL 2023</h1>
-                <input type='search' placeholder='Search Here' />
+                <input 
+                    type='search' 
+                    onChange={handleChange}
+                    placeholder='Search Here' 
+                    value={searchHeroi}
+                />
+                <button onClick={fetch}>Botão</button>
+                    
             </Header>
 
             

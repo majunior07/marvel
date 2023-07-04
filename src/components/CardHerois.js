@@ -27,14 +27,15 @@ function CardHerois() {
     return (
         <Fragment>
             {
-                (!herois) ? "" : (
+                (!herois) ? "Não encontrado!" : (
                     <div>
                         <div className="right">
                             <img src={`${herois.thumbnail.path}.${herois.thumbnail.extension} `}/>
                         </div>
                         <div className="left">
-                            <h1>{herois.name}</h1>
-                            <h4>{herois.description
+                            <h1>Id: {herois.id}</h1>
+                            <h1>Name: {herois.name}</h1>
+                            <h4>Description: {herois.description
 }</h4>
                         </div>
                     </div>
