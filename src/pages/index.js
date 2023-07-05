@@ -24,38 +24,38 @@ function Home(){
 
             if(query === ''){
                 
+                
                 const response = await api.get(`characters`)            
                 .then((response) => {
                 console.log('primeiro log', response.data.data.results);
                 setHerois(response.data.data.results);
-                setLoading(false);
-    
+                setLoading(false);    
                 })
-
                 .catch(error => console.log(error));
                 
             } else {
 
+                const params = {
+                    nameStartsWith: 'iron',
+                };
                 
-                const response = await api.get(`characters`)            
+                const response = await api.get(`characters`, params )            
                 .then((response) => {
+                console.log('terceiro log', api)
                 console.log('primeiro log', response.data.data.results);
                 setHerois(response.data.data.results);
-                setLoading(false);
-    
+                setLoading(false);    
                 })
                 .catch(error => console.log(error));
-            }
 
-           
+            }           
 
             }
             
             fetch();
 
 
-        }, [api]);
-
+        }, [query]);
         
     
     return(
