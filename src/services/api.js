@@ -9,7 +9,6 @@ const time = Number(new Date());
 
 const hash = md5(time + privateKey + publicKey) 
 
-//const iron = 'hulk';
 
 const api = axios.create({
 
@@ -17,8 +16,8 @@ const api = axios.create({
     params: {
         ts: time,
         apikey: publicKey,
-        //nameStartsWith: iron,
         hash,
+        limit: 10,
     },
 
 });
