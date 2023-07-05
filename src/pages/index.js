@@ -22,14 +22,32 @@ function Home(){
 
             const fetch = async() =>  {
 
-            const response = await api.get(`characters`)            
-            .then((response) => {
+            if(query === ''){
+                
+                const response = await api.get(`characters`)            
+                .then((response) => {
                 console.log('primeiro log', response.data.data.results);
                 setHerois(response.data.data.results);
                 setLoading(false);
+    
+                })
 
-            })
-            .catch(error => console.log(error));
+                .catch(error => console.log(error));
+                
+            } else {
+
+                
+                const response = await api.get(`characters`)            
+                .then((response) => {
+                console.log('primeiro log', response.data.data.results);
+                setHerois(response.data.data.results);
+                setLoading(false);
+    
+                })
+                .catch(error => console.log(error));
+            }
+
+           
 
             }
             
@@ -42,18 +60,15 @@ function Home(){
     
     return(
         <Container id='template-areas'>
+
             <Header id='header' >
                 <h1>MARVAL 2023</h1>
 
-                <Search search={(q) => setQuery(q)} />
-                { /*
-                <input 
+                <Search search={(q) => setQuery(q)}></Search>
+                { /* <input 
                     type='search' 
                     placeholder='teste' 
-                />
-                
-              */}
-
+                /> */}
             </Header>
 
             
