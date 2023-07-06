@@ -4,6 +4,7 @@ import api from '../services/api';
 import axios from 'axios';
 import Card from '../components/Card';
 import Search from '../components/Seach';
+import Loading from '../components/Loading';
 
 
 
@@ -59,7 +60,7 @@ function Home(){
         <Container id='template-areas'>
 
             <Header id='header' >
-                <h1>MARVAL 2023</h1>
+                <div>MARVAL 2023</div>
 
                 <Search search={(q) => setQuery(q)}></Search>
                 { /* <input 
@@ -73,7 +74,7 @@ function Home(){
                 <h1>Lista de Heróis:</h1>
                 <br />
                 {
-                    (!herois) ? "Not found!" : <Card setHerois={herois} isLoading={isLoading} />
+                    (!herois) ? <Loading /> : <Card setHerois={herois} isLoading={isLoading} />
                 }                
             </Sidebar>
 

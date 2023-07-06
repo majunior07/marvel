@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from '../services/api';
+import Loading from './Loading';
 
 function CardHerois() {
 
@@ -27,7 +28,7 @@ function CardHerois() {
     return (
         <Fragment>
             {
-                (!herois) ? "Não encontrado!" : (
+                (!herois) ? <Loading /> : (
                     <div>
                         <div className="right">
                             <img src={`${herois.thumbnail.path}.${herois.thumbnail.extension} `}/>

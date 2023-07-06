@@ -30,9 +30,30 @@ export const Header = styled.div`
     align-items: center;
     justify-content: space-around;
 
-    h1{
+    div{
         color: white;
-        margin-right: 40px;
+        //margin-right: 40px;
+        width: 350px;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        //font-family: monospace;
+        font-size: 3em;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }        
+    }
+
+    @keyframes blink {
+         50% {
+            border-color: transparent;
+        }
+        
     }
 
 
@@ -60,7 +81,7 @@ export const Sidebar = styled.div`
 `;
 
 export const Content = styled.div`
-background: white;
+    background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: content;
