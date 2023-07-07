@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import imageIron from '../img/ironMan.jpg';
 
 export const Container = styled.div`
     //background: red;
+    
     border: 3px solid red;
     padding: 20px;
     display: grid;
@@ -73,7 +75,7 @@ export const Header = styled.div`
 `;
 
 export const Sidebar = styled.div`
-    background: white;
+    //background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: sidebar;
@@ -81,7 +83,7 @@ export const Sidebar = styled.div`
 `;
 
 export const Content = styled.div`
-    background: white;
+    //background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: content;
@@ -89,7 +91,7 @@ export const Content = styled.div`
 `;
 
 export const Footer = styled.div`
-    background: white;
+    //background: white;
     border: 1px solid blue;
     padding: 20px;
     grid-area: footer;

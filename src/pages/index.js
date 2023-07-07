@@ -5,6 +5,7 @@ import axios from 'axios';
 import Card from '../components/Card';
 import Search from '../components/Seach';
 import Loading from '../components/Loading';
+import imageIron from '../img/ironMan.jpg';
 
 
 
@@ -85,7 +86,7 @@ function Home(){
             
 
             <Footer id='footer'>
-                <h1>Rodapé</h1>
+                
             </Footer>
 
         </Container>
