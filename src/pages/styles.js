@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background: red;
+    //background: red;
     border: 3px solid red;
     padding: 20px;
     display: grid;
@@ -25,13 +25,13 @@ export const Header = styled.div`
     padding: 20px;
     grid-area: header;
     height: 15vh;
-    background-color: black;
+    //background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     div{
-        color: white;
+        color: black;
         //margin-right: 40px;
         width: 350px;
         animation: typing 2s steps(22), blink .5s step-end infinite alternate;
