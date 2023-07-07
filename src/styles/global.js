@@ -1,5 +1,5 @@
 import { createGlobalStyle} from 'styled-components';
-import image from '../img/imageIron.jpg';
+
 
 export default createGlobalStyle`
 *{
@@ -10,8 +10,10 @@ export default createGlobalStyle`
 
 
 html, body, #root {
+    //background-color: red;
     //min-height: 100%;
-    background: #000 url(${image}) no-repeat center center/cover;
+    
+    
     height: 100%;
     color: #fff;
 

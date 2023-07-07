@@ -8,7 +8,7 @@ export const DivCard = styled.div`
 
         white-space: nowrap;
         overflow: hidden;
-        border-right: .9px solid;
+        border-right: .100px solid;
         //font-family: monospace;
         font-size: 1em;
     }
