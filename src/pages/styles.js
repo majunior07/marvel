@@ -3,16 +3,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     //background: red;
-    
 
-    border: 3px solid red;
     padding: 20px;
     display: grid;
     gap: 5px;
     grid-template-areas: 
-    'header header header'
-    'sidebar content content'
-    'footer footer footer';
+    'header header header header'
+    'sidebar content content content'
+    'footer footer footer footer';
     
     //Alinhamento Horizontal
     //justify-content: center;
@@ -31,10 +29,10 @@ export const Header = styled.div`
     //background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     div{
-        color: black;
+        color: #FF0000;
         //margin-right: 40px;
         width: 350px;
         animation: typing 2s steps(22), blink .5s step-end infinite alternate;
@@ -77,15 +75,21 @@ export const Header = styled.div`
 
 export const Sidebar = styled.div`
     //background: white;
-    border: 1px solid blue;
+    color: #fff;
+    //border: 1px solid blue;
     padding: 20px;
     grid-area: sidebar;
     height: 70vh;
+    display: flex;
+    align-items: ;
+    justify-content: start;
+    flex-direction: column;
+    
 `;
 
 export const Content = styled.div`
     //background: white;
-    border: 1px solid blue;
+    //border: 1px solid blue;
     padding: 20px;
     grid-area: content;
     height: 70vh;
@@ -93,7 +97,7 @@ export const Content = styled.div`
 
 export const Footer = styled.div`
     //background: white;
-    border: 1px solid blue;
+    //border: 1px solid blue;
     padding: 20px;
     grid-area: footer;
     height: 15vh;

@@ -8,7 +8,7 @@ function Card({setHerois, isLoading}){
     let navigate = useNavigate();
     
     return(
-        isLoading ? <Loading /> :
+        isLoading ? "Loading..." :
         <Fragment>
             {
                 (setHerois) ? (

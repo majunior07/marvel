@@ -61,7 +61,7 @@ function Home(){
         <Container id='template-areas'>
 
             <Header id='header' >
-                <div>MARVAL 2023</div>
+                <div>MARVEL 2023</div>
 
                 <Search search={(q) => setQuery(q)}></Search>
                 { /* <input 
@@ -72,10 +72,10 @@ function Home(){
 
             
             <Sidebar id='sidebar'>
-                <h1>Lista de Heróis:</h1>
+                <h1>List of Heroes:</h1>
                 <br />
                 {
-                    (!herois) ? <Loading /> : <Card setHerois={herois} isLoading={isLoading} />
+                    (!herois) ? "Loading..." : <Card setHerois={herois} isLoading={isLoading} />
                 }                
             </Sidebar>
 

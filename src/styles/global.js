@@ -1,5 +1,5 @@
 import { createGlobalStyle} from 'styled-components';
-
+import logo from '../img/marvel.jpeg';
 
 export default createGlobalStyle`
 *{
@@ -12,16 +12,9 @@ export default createGlobalStyle`
 html, body, #root {
     //background-color: red;
     //min-height: 100%;
-    
-    
-    height: 100%;
-    color: #fff;
+    background: url(${logo}) no-repeat center center/cover;
+    height: 100vh;
 
 }
-/*
-body{
-    //background: #c30707;
-}
-*/
 
 `;

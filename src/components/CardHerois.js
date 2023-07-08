@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import api from '../services/api';
 import Loading from './Loading';
 
+
 function CardHerois() {
 
     const {id} = useParams();
@@ -28,16 +29,15 @@ function CardHerois() {
     return (
         <Fragment>
             {
-                (!herois) ? <Loading /> : (
+                (!herois) ? "Loading..." : (
                     <div>
-                        <div className="right">
+                        <div>
                             <img src={`${herois.thumbnail.path}.${herois.thumbnail.extension} `}/>
                         </div>
-                        <div className="left">
+                        <div>
                             <h1>Id: {herois.id}</h1>
                             <h1>Name: {herois.name}</h1>
-                            <h4>Description: {herois.description
-}</h4>
+                            <h4>Description: {herois.description}</h4>
                         </div>
                     </div>
                 )
