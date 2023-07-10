@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     //background: red;
-
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
     display: grid;
     gap: 5px;
     grid-template-areas: 
@@ -111,8 +113,9 @@ export const DivCard = styled.div`
 `;
 
 export const CardHeroi = styled.div`
-   border: 3px solid blue;
    background-color: #fff;
+   height: 100%;
+   width: 100%;
    color: black;
    display: flex;
    align-items: center;
@@ -120,14 +123,29 @@ export const CardHeroi = styled.div`
 `;
 
 export const Esquerda = styled.div`
-   border: 3px solid blue;
+   height: 100%;
    width: 60%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   img{
+    width: 97%;
+    height: 97%;
+   }
 `;
 
 export const Direita = styled.div`
-    border: 3px solid blue;
+    height: 100%;
+    width: 40%;
+    padding: 20px;
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
+    flex-direction: column;
+`;
+
+export const Loader = styled.div`
+    border: 10px solid blue;
+    background-color: black;
 `;

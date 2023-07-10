@@ -75,7 +75,7 @@ function Home(){
                 <h1>List of Heroes:</h1>
                 <br />
                 {
-                    (!herois) ? "Loading..." : <Card setHerois={herois} isLoading={isLoading} />
+                    (!herois) ? <Loading /> : <Card setHerois={herois} isLoading={isLoading} />
                 }                
             </Sidebar>
 

@@ -32,14 +32,14 @@ function CardHerois() {
             {
                 (!herois) ? "Loading..." : (
                     <CardHeroi>
-                        <Direita>
-                            <img src={`${herois.thumbnail.path}.${herois.thumbnail.extension} `}/>
-                        </Direita>
                         <Esquerda>
+                            <img src={`${herois.thumbnail.path}.${herois.thumbnail.extension} `}/>
+                        </Esquerda>
+                        <Direita>
                             <h1>Id: {herois.id}</h1>
                             <h1>Name: {herois.name}</h1>
                             <h4>Description: {herois.description}</h4>
-                        </Esquerda>
+                        </Direita>
                     </CardHeroi>
                 )
             }
