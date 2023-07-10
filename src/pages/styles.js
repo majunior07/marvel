@@ -66,7 +66,7 @@ export const Header = styled.div`
         width: 350px;
         height: 35px;
         border-radius: 1rem;
-        color: white;
+        color: red;
         font-size: 20px;
         padding: 1.2rem;
         border: 2px solid #B41F23;
@@ -101,4 +101,33 @@ export const Footer = styled.div`
     padding: 20px;
     grid-area: footer;
     height: 15vh;
+`;
+
+export const DivCard = styled.div`
+        color: #FF0000;
+        font-size: 14px;
+        display: block;
+        padding: 1px;
+`;
+
+export const CardHeroi = styled.div`
+   border: 3px solid blue;
+   background-color: #fff;
+   color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+`;
+
+export const Esquerda = styled.div`
+   border: 3px solid blue;
+   width: 60%;
+`;
+
+export const Direita = styled.div`
+    border: 3px solid blue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 `;

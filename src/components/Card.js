@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import Loading from "./Loading";
-import { DivCard } from './styles';
+import { DivCard } from "../pages/styles";
 
 function Card({setHerois, isLoading}){
 
