@@ -10,9 +10,9 @@ export const Container = styled.div`
     display: grid;
     gap: 5px;
     grid-template-areas: 
-    'header header header header'
-    'sidebar content content content'
-    'footer footer footer footer';
+    'header header header'
+    'sidebar content content'
+    'footer footer footer';
     
     //Alinhamento Horizontal
     //justify-content: center;
@@ -78,12 +78,12 @@ export const Header = styled.div`
 export const Sidebar = styled.div`
     //background: white;
     color: #fff;
-    //border: 1px solid blue;
+    //border: 15px solid blue;
     padding: 20px;
     grid-area: sidebar;
     height: 70vh;
     display: flex;
-    align-items: ;
+    align-items: start;
     justify-content: start;
     flex-direction: column;
     
@@ -146,6 +146,12 @@ export const Direita = styled.div`
 `;
 
 export const Loader = styled.div`
-    border: 10px solid blue;
-    background-color: black;
+    //border: 3px solid blue;
+    //background-color: black;
+    margin-left: 550px;
+    margin-top: 50px;
+
+    img{
+        width: 200px;
+    }
 `;
