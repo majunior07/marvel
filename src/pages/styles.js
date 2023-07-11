@@ -8,11 +8,11 @@ export const Container = styled.div`
     padding: 0 20px;
     justify-content: space-between;
     display: grid;
-    gap: 5px;
+    grid-gap: 5px;
     grid-template-areas: 
-    'header header header'
-    'sidebar content content'
-    'footer footer footer';
+    'header header header header'
+    'sidebar content content content'
+    'footer footer footer footer';
     
     //Alinhamento Horizontal
     //justify-content: center;
@@ -24,9 +24,10 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-    //border: 1px solid blue;
+    border: 5px solid blue;
     padding: 20px;
     grid-area: header;
+    grid-column: header;
     height: 15vh;
     //background-color: black;
     display: flex;
@@ -78,10 +79,13 @@ export const Header = styled.div`
 export const Sidebar = styled.div`
     //background: white;
     color: #fff;
-    //border: 15px solid blue;
+    border: 5px solid red;
     padding: 20px;
     grid-area: sidebar;
+    //grid-column: sidebar;
     height: 70vh;
+    max-width: 70%;
+    min-width: 70%;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -91,17 +95,19 @@ export const Sidebar = styled.div`
 
 export const Content = styled.div`
     //background: white;
-    //border: 1px solid blue;
+    border: 5px solid black;
     padding: 20px;
     grid-area: content;
+    grid-column: content;
     height: 70vh;
 `;
 
 export const Footer = styled.div`
     //background: white;
-    //border: 1px solid blue;
+    border: 5px solid blue;
     padding: 20px;
     grid-area: footer;
+    grid-column: footer;
     height: 15vh;
 `;
 
