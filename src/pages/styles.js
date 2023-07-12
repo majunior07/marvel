@@ -6,54 +6,44 @@ export const Container = styled.div`
     margin: 0 auto;
     width: 100vw; // ** vw
     height: 100vh; // ** vh
-    //padding: 0 20px;
+    padding: 0 20px;
     justify-content: space-between;
     display: grid;
     grid-gap: 5px;
-
     grid-template-areas: 
     'header header header'
     'sidebar content content'
     'footer footer footer';
 
-    //grid-template-columns: repeat(4, 1fr);
-
-    //grid-template-rows: 1fr 1fr 1fr 1fr;
-    
-    //Alinhamento Horizontal
-    //justify-content: center;
-    
-
-    //align-items: center;
-    // Alinhamento Vertical
 
     @media only screen and (max-width: 820px) {
+
+        min-width: 70%;
+        min-height: 70%;
         grid-template-areas: 
-            'header'
-            'sidebar'
-            'content'
-            'footer';
+            'header header '
+            'sidebar sidebar'
+            'footer footer';
 
-        grid-template-columns: 1fr;
+        //grid-template-columns: 1fr;
 
-        grid-template-rows: 1fr;
+        //grid-template-rows: 1fr;
     }
 
     
 `;
 
 export const Header = styled.div`
-    border: 5px solid blue;
-    padding: 20px;
-    
+    border: 5px solid blue;   
     grid-area: header;
-    
-
-    height: 15vh;
-    //background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
 
     div{
         color: #FF0000;
@@ -81,12 +71,10 @@ export const Header = styled.div`
         
     }
 
-
     input{
         outline: none;
         background: none;
         border: none;
-        //margin-left: 2rem;
         width: 350px;
         height: 35px;
         border-radius: 1rem;
@@ -98,13 +86,12 @@ export const Header = styled.div`
 `;
 
 export const Sidebar = styled.div`
-    //background: white;
     color: #fff;
-    border: 5px solid yellow;
-    //padding: 0px;
+    border: 5px solid yellow; 
     grid-area: sidebar;
-
-    height: 70vh;
+    //grid-column-start: 1;
+    //grid-column-end: 2;
+    height: 50vh;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -112,6 +99,9 @@ export const Sidebar = styled.div`
     
     
 `;
+
+
+
 
 export const Titulo = styled.h1`
     margin-top: 13px;
@@ -123,7 +113,6 @@ export const Titulo = styled.h1`
     }
 `;
 
-
 export const Lista = styled.h1`
     font-size: 22px;
 
@@ -134,25 +123,29 @@ export const Lista = styled.h1`
  
 
 
+
 export const Content = styled.div`
-    //background: white;
     border: 5px solid green;
-    padding: 20px;
-
     grid-area: content;
-
-    height: 70vh;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 50vh;
 `;
 
 export const Footer = styled.div`
-    //background: white;
     border: 3px solid purple;
-    padding: 20px;
-
     grid-area: footer;
-    
-    height: 15vh;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 20vh;
 `;
+
+
+
+
+
+
+
 
 export const DivCard = styled.div`
         color: #FF0000;

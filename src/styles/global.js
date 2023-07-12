@@ -10,8 +10,6 @@ export default createGlobalStyle`
 
 
 html, body, #root {
-    //background-color: red;
-    //min-height: 100%;
     background: url(${logo}) no-repeat center center/cover;
     width: 100vw; // ** vw
     height: 100vh; // ** vh
