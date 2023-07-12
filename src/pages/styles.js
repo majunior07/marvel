@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     //background: red;
+    margin: 0 auto;
     width: 100vw; // ** vw
     height: 100vh; // ** vh
-    padding: 0 20px;
+    //padding: 0 20px;
     justify-content: space-between;
     display: grid;
     grid-gap: 5px;
@@ -15,9 +16,9 @@ export const Container = styled.div`
     'sidebar content content'
     'footer footer footer';
 
-    grid-template-columns: 1fr 1fr 1fr;
+    //grid-template-columns: repeat(4, 1fr);
 
-    grid-template-rows: 1fr 3fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr 1fr;
     
     //Alinhamento Horizontal
     //justify-content: center;
@@ -44,9 +45,9 @@ export const Container = styled.div`
 export const Header = styled.div`
     border: 5px solid blue;
     padding: 20px;
-
+    
     grid-area: header;
-    //grid-column: header;
+    
 
     height: 15vh;
     //background-color: black;
@@ -99,10 +100,9 @@ export const Header = styled.div`
 export const Sidebar = styled.div`
     //background: white;
     color: #fff;
-    border: 5px solid red;
+    border: 5px solid yellow;
     //padding: 0px;
     grid-area: sidebar;
-    //grid-column: sidebar;
 
     height: 70vh;
     display: flex;
@@ -114,10 +114,9 @@ export const Sidebar = styled.div`
 `;
 
 export const Titulo = styled.h1`
-    border: 3px solid purple;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 50px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-size: 38px;
 
     @media only screen and (max-width: 820px) {
         font-size: 30px;
@@ -126,7 +125,7 @@ export const Titulo = styled.h1`
 
 
 export const Lista = styled.h1`
-    font-size: 30px;
+    font-size: 22px;
 
     @media only screen and (max-width: 820px) {
         font-size: 15px;
@@ -141,19 +140,17 @@ export const Content = styled.div`
     padding: 20px;
 
     grid-area: content;
-    //grid-column: content;
 
     height: 70vh;
 `;
 
 export const Footer = styled.div`
     //background: white;
-    border: 5px solid blue;
+    border: 3px solid purple;
     padding: 20px;
 
     grid-area: footer;
-    //grid-column: footer;
-
+    
     height: 15vh;
 `;
 
