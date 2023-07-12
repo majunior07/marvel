@@ -17,7 +17,7 @@ export const Container = styled.div`
 
     grid-template-columns: 1fr 1fr 1fr;
 
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     
     //Alinhamento Horizontal
     //justify-content: center;
@@ -27,7 +27,15 @@ export const Container = styled.div`
     // Alinhamento Vertical
 
     @media only screen and (max-width: 820px) {
-        
+        grid-template-areas: 
+            'header'
+            'sidebar'
+            'content'
+            'footer';
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 1fr;
     }
 
     
@@ -92,24 +100,44 @@ export const Sidebar = styled.div`
     //background: white;
     color: #fff;
     border: 5px solid red;
-    padding: 20px;
-
+    //padding: 0px;
     grid-area: sidebar;
     //grid-column: sidebar;
 
     height: 70vh;
-    max-width: 70%;
-    min-width: 70%;
     display: flex;
     align-items: start;
     justify-content: start;
     flex-direction: column;
     
+    
 `;
+
+export const Titulo = styled.h1`
+    border: 3px solid purple;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+
+    @media only screen and (max-width: 820px) {
+        font-size: 30px;
+    }
+`;
+
+
+export const Lista = styled.h1`
+    font-size: 30px;
+
+    @media only screen and (max-width: 820px) {
+        font-size: 15px;
+    }
+`;
+ 
+
 
 export const Content = styled.div`
     //background: white;
-    border: 5px solid black;
+    border: 5px solid green;
     padding: 20px;
 
     grid-area: content;

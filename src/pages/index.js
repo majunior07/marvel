@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Header, Sidebar, Content, Footer} from './styles';
+import { Container, Header, Sidebar, Content, Footer,Titulo } from './styles';
 import api from '../services/api';
 import axios from 'axios';
 import Card from '../components/Card';
@@ -72,7 +72,7 @@ function Home(){
 
             
             <Sidebar id='sidebar'>
-                <h1>List of Heroes:</h1>
+                <Titulo>List of Heroes:</Titulo>
                 <br />
                 {
                     (!herois) ? <Loading /> : <Card setHerois={herois} isLoading={isLoading} />

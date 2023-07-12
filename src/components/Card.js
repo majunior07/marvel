@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import Loading from "./Loading";
-import { DivCard } from "../pages/styles";
+import { DivCard, Lista } from "../pages/styles";
 
 function Card({setHerois, isLoading}){
 
@@ -17,7 +17,7 @@ function Card({setHerois, isLoading}){
                             <DivCard 
                                 key={heroi.id} 
                                 onClick={() => navigate(`/${heroi.id}`)}>
-                                <h1>{heroi.name}</h1>
+                                <Lista>{heroi.name}</Lista>
                             </DivCard>
                         )
                     })
