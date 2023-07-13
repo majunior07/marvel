@@ -8,6 +8,7 @@ export const Container = styled.div`
     height: 100vh; // ** vh
     padding: 0 20px;
     justify-content: space-between;
+
     display: grid;
     grid-gap: 5px;
     grid-template-areas: 
@@ -15,19 +16,23 @@ export const Container = styled.div`
     'sidebar content content'
     'footer footer footer';
 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
 
     @media only screen and (max-width: 820px) {
 
-        min-width: 70%;
-        min-height: 70%;
+        //max-width: 70%;
+        //max-height: 70%;
         grid-template-areas: 
-            'header header '
-            'sidebar sidebar'
-            'footer footer';
+            'header'
+            'sidebar'
+            'content'
+            'footer';
 
-        //grid-template-columns: 1fr;
+        grid-template-columns: auto;
 
-        //grid-template-rows: 1fr;
+        grid-template-rows: auto;
     }
 
     
@@ -36,8 +41,6 @@ export const Container = styled.div`
 export const Header = styled.div`
     border: 5px solid blue;   
     grid-area: header;
-    grid-column-start: 1;
-    grid-column-end: 5;
     height: 20vh;
     display: flex;
     align-items: center;
@@ -89,8 +92,6 @@ export const Sidebar = styled.div`
     color: #fff;
     border: 5px solid yellow; 
     grid-area: sidebar;
-    //grid-column-start: 1;
-    //grid-column-end: 2;
     height: 50vh;
     display: flex;
     align-items: start;
@@ -104,8 +105,8 @@ export const Sidebar = styled.div`
 
 
 export const Titulo = styled.h1`
-    margin-top: 13px;
-    margin-bottom: 13px;
+    //margin-top: 13px;
+    //margin-bottom: 10px;
     font-size: 38px;
 
     @media only screen and (max-width: 820px) {
@@ -127,16 +128,12 @@ export const Lista = styled.h1`
 export const Content = styled.div`
     border: 5px solid green;
     grid-area: content;
-    grid-column-start: 2;
-    grid-column-end: 5;
     height: 50vh;
 `;
 
 export const Footer = styled.div`
     border: 3px solid purple;
     grid-area: footer;
-    grid-column-start: 1;
-    grid-column-end: 5;
     height: 20vh;
 `;
 
