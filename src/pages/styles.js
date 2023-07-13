@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
+    
     //background: red;
     margin: 0 auto;
     width: 100vw; // ** vw
@@ -16,23 +17,23 @@ export const Container = styled.div`
     'sidebar content content'
     'footer footer footer';
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: auto auto auto;
 
 
     @media only screen and (max-width: 820px) {
 
-        //max-width: 70%;
-        //max-height: 70%;
+        min-width: 100vw;
+        min-height: 100vh;
         grid-template-areas: 
             'header'
             'sidebar'
-            'content'
+            //'content' retirado no item "Content"
             'footer';
 
         grid-template-columns: auto;
 
-        grid-template-rows: auto;
+        
     }
 
     
@@ -129,6 +130,11 @@ export const Content = styled.div`
     border: 5px solid green;
     grid-area: content;
     height: 50vh;
+
+    @media only screen and (max-width: 820px) {
+        display: none;
+    }
+
 `;
 
 export const Footer = styled.div`

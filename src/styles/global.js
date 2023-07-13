@@ -10,9 +10,11 @@ export default createGlobalStyle`
 
 
 html, body, #root {
-    background: url(${logo}) no-repeat center center/cover;
+    background: url(${logo}) no-repeat center center/cover ;
     width: 100vw; // ** vw
     height: 100vh; // ** vh
+    margin: 0 auto;
 }
+
 
 `;

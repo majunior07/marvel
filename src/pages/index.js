@@ -59,7 +59,7 @@ function Home(){
     
     return(
         <Container id='template-areas'>
-
+          
             <Header id='header' >
                 <div>MARVEL 2023</div>
 
