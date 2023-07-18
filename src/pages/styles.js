@@ -40,7 +40,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-    border: 5px solid blue;   
+    //border: 5px solid blue;   
     grid-area: header;
     height: 20vh;
     display: flex;
@@ -91,7 +91,7 @@ export const Header = styled.div`
 
 export const Sidebar = styled.div`
     color: #fff;
-    border: 5px solid yellow; 
+    //border: 5px solid yellow; 
     grid-area: sidebar;
     height: 50vh;
     display: flex;
@@ -127,7 +127,7 @@ export const Lista = styled.h1`
 
 
 export const Content = styled.div`
-    border: 5px solid green;
+    //border: 5px solid green;
     grid-area: content;
     height: 50vh;
 
@@ -138,7 +138,7 @@ export const Content = styled.div`
 `;
 
 export const Footer = styled.div`
-    border: 3px solid purple;
+    //border: 3px solid purple;
     grid-area: footer;
     height: 20vh;
 `;
